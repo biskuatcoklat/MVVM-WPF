@@ -16,7 +16,8 @@ namespace Responsi_PemrogLanjut.Models
 
         public ProdukService()
         {
-            ObjSqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["ProdukConnection"].ConnectionString);
+            ObjSqlConnection = new SqlConnection
+                (ConfigurationManager.ConnectionStrings["ProdukConnection"].ConnectionString);
             ObjSqlCommand = new SqlCommand();
             ObjSqlCommand.Connection = ObjSqlConnection;
             ObjSqlCommand.CommandType = CommandType.StoredProcedure;
@@ -118,6 +119,7 @@ namespace Responsi_PemrogLanjut.Models
                 ObjSqlCommand.Parameters.Clear();
                 ObjSqlCommand.CommandText = "udp_DeleteProduk";
                 ObjSqlCommand.Parameters.AddWithValue("@Id", id);
+                ObjSqlConnection.Open();
                 int NoOfRowsAffected = ObjSqlCommand.ExecuteNonQuery();
                 IsDeleted = NoOfRowsAffected > 0;
             }
