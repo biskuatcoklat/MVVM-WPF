@@ -16,3 +16,7 @@ H:\semester 3\pemrog lanjut\Responsi-PemrogLanjut\Responsi-PemrogLanjut\obj\Debu
 H:\semester 3\pemrog lanjut\Responsi-PemrogLanjut\Responsi-PemrogLanjut\obj\Debug\Responsi-PemrogLanjut.csproj.CoreCompileInputs.cache
 H:\semester 3\pemrog lanjut\Responsi-PemrogLanjut\Responsi-PemrogLanjut\obj\Debug\Responsi-PemrogLanjut.exe
 H:\semester 3\pemrog lanjut\Responsi-PemrogLanjut\Responsi-PemrogLanjut\obj\Debug\Responsi-PemrogLanjut.pdb
+H:\semester 3\pemrog lanjut\Responsi-PemrogLanjut\Responsi-PemrogLanjut\obj\Debug\Views\Home.g.cs
+H:\semester 3\pemrog lanjut\Responsi-PemrogLanjut\Responsi-PemrogLanjut\obj\Debug\Views\Proses Data.g.cs
+H:\semester 3\pemrog lanjut\Responsi-PemrogLanjut\Responsi-PemrogLanjut\obj\Debug\Views\Home.baml
+H:\semester 3\pemrog lanjut\Responsi-PemrogLanjut\Responsi-PemrogLanjut\obj\Debug\Views\Proses Data.baml

@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Responsi_PemrogLanjut"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" xmlns:vw="clr-namespace:Responsi_PemrogLanjut.Views">
+        Title="MainWindow" Height="450" Width="850" xmlns:vw="clr-namespace:Responsi_PemrogLanjut.Views"
+        >
     <Grid>
-        <vw:ProdukView></vw:ProdukView>
+        <TextBlock Text="Asslamualaikum Wahyu" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" />
+        <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top" Margin="5,10,0,0">
+            <Button Content="Home" MinWidth="50" Margin="10,0,0,0" Click="Button_Click_Home"/>
+            <Button Content="Proses Data" MinWidth="50" Margin="10,0,0,0" Click="Button_Click_ProsesData"/>
+        </StackPanel>
+        <Frame x:Name="Main" Margin="0,50,0,0" NavigationUIVisibility="Hidden" />
+        <!--<vw:ProdukView></vw:ProdukView>-->
     </Grid>
 </Window>

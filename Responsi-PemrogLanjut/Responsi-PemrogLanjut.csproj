@@ -57,8 +57,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModels\ProdukViewModel.cs" />
+    <Compile Include="Views\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ProdukView.xaml.cs">
       <DependentUpon>ProdukView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Proses Data.xaml.cs">
+      <DependentUpon>Proses Data.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -73,7 +79,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ProdukView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Proses Data.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

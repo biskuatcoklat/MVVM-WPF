@@ -1,0 +1,157 @@
+﻿<Page x:Class="Responsi_PemrogLanjut.Views.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Responsi_PemrogLanjut.Views"
+      xmlns:viewmodels="clr-namespace:Responsi_PemrogLanjut.ViewModels" 
+               d:DataContext="{d:DesignInstance Type=viewmodels:ProdukViewModel}"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Home">
+
+    <Grid Background="Yellow">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="194" />
+            <ColumnDefinition Width="291"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Text=" Inventory Barang "
+                   Grid.Row="0"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center" Margin="126,10,310,6" Width="170" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        <TextBlock Text="Masukkan Id"
+                   Grid.Row="1"
+                   Grid.Column="0" Margin="66,6,56,6"
+                   HorizontalAlignment="Center"
+                   Padding="3" Width="72"/>
+
+        <TextBox Name="TxtId"
+                   Grid.Row="2"
+                   Grid.Column="0" Margin="5,8"
+                   Padding="3" 
+                   Text="{Binding Path=CurrentProduk.Id, Mode=TwoWay}"/>
+
+        <TextBlock Text="Masukkan Nama Barang"
+                   Grid.Row="1" Margin="82,6,75,10"
+                   Padding="3" HorizontalAlignment="Center" Width="134" Grid.Column="1"/>
+
+        <TextBox Name="TxtNama"
+                   Grid.Row="2" Margin="5,8"
+                   Padding="3" 
+                   Text="{Binding Path=CurrentProduk.Namebarang, Mode=TwoWay}" Grid.Column="1" />
+
+        <TextBlock Text="Masukkan Status"
+                   Grid.Row="1"
+                   Grid.Column="2" Margin="95,6,124,10"
+                   Padding="3" HorizontalAlignment="Center" Width="96"/>
+
+
+        <TextBox Name="TxtStatus"
+                   Grid.Row="2"
+                   Grid.Column="2" Margin="5,8"
+                   Padding="3" 
+                   Text="{Binding Path=CurrentProduk.Statusbarang, Mode=TwoWay}"/>
+
+        <TextBlock Name="txtBlockMessage"
+                   Grid.Row="6" Margin="214,6,21,10"
+                   Padding="3" Text="Notifikasi"  HorizontalAlignment="Center" Width="56" Grid.Column="1"/>
+
+        <TextBox Name="TxtNotif"
+                   Grid.Row="7" Margin="56,6,193,10"
+                   Padding="3" 
+                   Text="{Binding Path=Message}" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="9"
+                    Grid.Column="0" Margin="5,8">
+            <Button Name="btnAdd"
+                    Content="Add" 
+                    Margin="5,8" 
+                    HorizontalAlignment="Center" 
+                    Padding="3" Command="{Binding Path=SaveCommand}" Width="174"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="9"
+                    Grid.Column="1" Margin="5,8,69,8">
+            <Button Name="btnSearch"
+                    Content="Search" 
+                    Margin="5,8" 
+                    HorizontalAlignment="Center" 
+                    Padding="3" Command="{Binding Path=SearchCommand}" Width="203"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="9"
+                    Grid.Column="1" Margin="227,8,180,8" Grid.ColumnSpan="2">
+            <Button Name="btnUpdate"
+                    Content="Update" 
+                    Margin="5,8"
+                    HorizontalAlignment="Center" 
+                    Padding="3" Command="{Binding Path=UpdateCommand}" Width="176"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="9"
+                    Grid.Column="2" Margin="135,8,5,8">
+            <Button Name="btnDelete"
+                    Content="Delete" 
+                    Margin="5,8"
+                    HorizontalAlignment="Center" 
+                    Padding="3" Command="{Binding Path=DeleteCommand}" Width="165"/>
+        </StackPanel>
+
+        <!--<StackPanel Orientation="Horizontal"
+                    Grid.Row="8"
+                    Grid.Column="1" Margin="5,8">
+            <Button Name="btnAdd"
+                    Content="Add" 
+                    Margin="5,8" 
+                    Padding="3" Command="{Binding Path=SaveCommand}"/>
+            <Button Name="btnSearch"
+                    Content="Search" 
+                    Margin="5,8" 
+                    Padding="3" Command="{Binding Path=SearchCommand}"/>
+            <Button Name="btnUpdate"
+                    Content="Update" 
+                    Margin="5,8"
+                    Padding="3" Command="{Binding Path=UpdateCommand}"/>
+            <Button Name="btnDelete"
+                    Content="Delete" 
+                    Margin="5,8"
+                    Padding="3" Command="{Binding Path=DeleteCommand}"/>
+        </StackPanel>-->
+
+
+        <!--<DataGrid Name="dgProduk"
+                  AutoGenerateColumns="False"
+                  Grid.Row="10" Margin="23,100,95,-140"
+                  Padding="3" ItemsSource="{Binding Path=ProdukList,Mode=TwoWay}" Grid.ColumnSpan="2" >
+            <DataGrid.Columns>
+                <DataGridTextColumn 
+                    Header="Produk Id" Width="auto"
+                    Binding="{Binding Path=Id}"/>
+                <DataGridTextColumn 
+                    Header="Nama Barang" Width="auto"
+                    Binding="{Binding Path=Namebarang}"/>
+                <DataGridTextColumn 
+                    Header="Status Barang" Width="auto"
+                    Binding="{Binding Path=Statusbarang}"/>
+            </DataGrid.Columns>
+        </DataGrid>-->
+    </Grid>
+</Page>

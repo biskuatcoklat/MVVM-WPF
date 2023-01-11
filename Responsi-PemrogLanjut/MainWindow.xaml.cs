@@ -28,5 +28,20 @@ namespace Responsi_PemrogLanjut
             ViewModel = new ProdukViewModel();
             this.DataContext = ViewModel;
         }
+        
+        private void Button_Click_Home(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Views.Home();
+            ViewModel = new ProdukViewModel();
+            this.DataContext = ViewModel;
+        }
+
+        private void Button_Click_ProsesData(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Views.Proses_Data();
+            ViewModel = new ProdukViewModel();
+            this.DataContext = ViewModel;
+        }
+
     }
 }
