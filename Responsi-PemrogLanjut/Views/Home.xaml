@@ -10,7 +10,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Home">
 
-    <Grid Background="Yellow">
+    <Grid Background="#F2E7D5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="194" />
             <ColumnDefinition Width="291"/>
@@ -34,7 +34,8 @@
                    Grid.Row="0"
                    FontSize="20"
                    FontWeight="Bold"
-                   HorizontalAlignment="Center" Margin="126,10,310,6" Width="170" Grid.Column="1" Grid.ColumnSpan="2"/>
+                   HorizontalAlignment="Center" Margin="126,10,310,6" 
+                   Width="170" Grid.Column="1" Grid.ColumnSpan="2"/>
 
         <TextBlock Text="Masukkan Id"
                    Grid.Row="1"

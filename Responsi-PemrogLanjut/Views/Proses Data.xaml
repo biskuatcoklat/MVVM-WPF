@@ -10,7 +10,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Proses_Data">
 
-    <Grid Background="#FFFF00">
+    <Grid Background="#F2E7D5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="*"/>
@@ -35,6 +35,7 @@
         <DataGrid Name="dgProduk"
                   AutoGenerateColumns="False"
                   Grid.Row="6"
+                  HorizontalAlignment="Center"
                   Padding="3" ItemsSource="{Binding Path=ProdukList,Mode=TwoWay}" Grid.ColumnSpan="2" >
             <DataGrid.Columns>
                 <DataGridTextColumn 

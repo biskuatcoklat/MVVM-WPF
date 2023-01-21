@@ -5,15 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Responsi_PemrogLanjut"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="850" xmlns:vw="clr-namespace:Responsi_PemrogLanjut.Views"
+        Title="MainWindow" Height="600" Width="1100" xmlns:vw="clr-namespace:Responsi_PemrogLanjut.Views"
+        
+        
         >
     <Grid>
-        <TextBlock Text="Asslamualaikum Wahyu" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" />
-        <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top" Margin="5,10,0,0">
-            <Button Content="Home" MinWidth="50" Margin="10,0,0,0" Click="Button_Click_Home"/>
-            <Button Content="Proses Data" MinWidth="50" Margin="10,0,0,0" Click="Button_Click_ProsesData"/>
+        
+        <Border Background="#F2E7D5"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Background="#D8CBAC" Width="Auto" Margin="0,0,0,0">
+            <Button Content="Home" MinWidth="50" Margin="10,10,10,0" Click="Button_Click_Home" Height="41" Visibility="Hidden" />
+            <TextBlock Text="Welcome Wahyu"  FontSize="32" Margin="0,0,0,0" VerticalAlignment="Center"  Visibility="Hidden"/>
+            <TextBlock Text="Welcome Wa"  FontSize="32" Margin="0,0,0,0" VerticalAlignment="Center" Visibility="Hidden" />
+            <TextBlock Text="Zero Store"  FontSize="32" Margin="0,0,0,0" VerticalAlignment="Center"  />
         </StackPanel>
-        <Frame x:Name="Main" Margin="0,50,0,0" NavigationUIVisibility="Hidden" />
-        <!--<vw:ProdukView></vw:ProdukView>-->
+        <TextBlock Text="          Welcome Admin" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" />
+        <StackPanel Orientation="Vertical" Width="220" HorizontalAlignment="Left" Margin="0,50,0,0" Background="#DFD3C3">
+            <Button  Background="#D8CBAC" BorderBrush="Transparent" Content="Home" MinWidth="50" Margin="10,10,10,0" Click="Button_Click_Home" Height="41" FontSize="18" FontWeight="Bold" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Background="#D8CBAC" BorderBrush="Transparent"  Content="Proses Barang" MinWidth="50" Margin="10,30,10,0" Click="Button_Click_ProsesData" Height="41" FontSize="18" FontWeight="Bold">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Background="#D8CBAC" BorderBrush="Transparent"  Content="Data Barang" MinWidth="50" Margin="10,30,10,0" Click="Button_Click_DataBarang" Height="41" FontSize="18" FontWeight="Bold">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Background="#D8CBAC" BorderBrush="Transparent"  Content="Konsumen" MinWidth="50" Margin="10,30,10,0" Click="Button_Click_Konsumen" Height="41" FontSize="18" FontWeight="Bold">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Background="#D8CBAC" BorderBrush="Transparent"  Content="Transaksi" MinWidth="50" Margin="10,30,10,0" Click="Button_Click_Transaksi" Height="41" FontSize="18" FontWeight="Bold">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+
+        <Frame x:Name="Main" Margin="220,50,0,0" NavigationUIVisibility="Hidden" />
+        
+
+
     </Grid>
+    
+    
 </Window>
+
